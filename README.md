@@ -1,8 +1,8 @@
-# ar-bgc-argo: analysis-ready BGC-Argo float time series
+# pp-bgc-argo: An interactive Jupyter Notebook tutorial for post-processing biogeochemical Argo float time series
 
-[:japan: 日本語はこちら](#解析可能な生物地球化学アルゴフロートの時系列)
+[:japan: 日本語はこちら](#生物地球化学アルゴフロート時系列後処理チュートリアル)
 
-`ar-bgc-argo` is a collection of Jupyter Notebook templates for searching, downloading, and post-processing the concatenated synthetic-profile time series of BGC-Argo floats.
+`pp-bgc-argo` is a collection of Jupyter Notebook templates that serves as a tutorial for post-processing biogeochemical Argo (BGC-Argo) float time series. searching, downloading, and post-processing the concatenated synthetic-profile time series of BGC-Argo floats.
 
 To use these templates, simply create a copy (and rename it), modify the user inputs, and run it on your Jupyter environment. **But please remember to cite the following paper to make us happy 😃:**
 
@@ -33,7 +33,6 @@ If none of the above are relevant, we recommend other tools such as [Argo Fleet 
 
 ### `generate.ipynb` 🍰
 This is the main notebook, which post-processes the raw data by filtering, smoothing, and interpolation to make them "analysis-ready". Specifically, it will take the following steps and produces figures (*.png) and a netCDF file at the end:
-
 1. Read raw profiles (e.g. `1234567_Sprof.nc`).
 1. Filter using Quality Control (QC) values (default: 1, 2, 5, 8).
 1. Smooth CHLA_ADJUSTED based on Schmechtig et al. (2023).
@@ -81,13 +80,6 @@ Please feel free to message [@hakaseh](https://github.com/hakaseh) for questions
 ### Old repository
 `ar-bgc-argo` was initially hosted on Gitlab, but was later moved to Github for the JOSS submission. We kept the old repository for reference to [issues](https://gitlab.com/evparg/analysis-ready-bgc-argo-dataset/-/issues).
 
-### Developers
-For developers, do the following to configure git environment for Jupyter Notebook (this needs to be done for the first time only). This will strip output in the notebooks before committing, which makes code changes trackable.
-```
-pip install nbdime nbstripout
-nbdime config-git --enable
-nbstripout --install  # Automatically strip output before committing
-```
 
 ### Key references and useful websites
 - [Wong et al. 2020](https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2020.00700/full): this paper provides an overview of Argo
@@ -97,7 +89,7 @@ nbstripout --install  # Automatically strip output before committing
 
 ---
 
-# 解析可能な生物地球化学アルゴフロートの時系列
+# 生物地球化学アルゴフロート時系列後処理チュートリアル
 
 `ar-bgc-argo`は、生物地球化学アルゴ(BGC-Argo)フロートのsynthetic-profile時系列を"解析可能"な状態にデータセットを創出するJupyter Notebookを提供しています。
 

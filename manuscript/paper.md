@@ -1,11 +1,11 @@
 ---
-title: 'ar-bgc-argo: Jupyter Notebook templates for searching, downloading, and post-processing biogeochemical Argo float time series'
+title: 'ar-bgc-argo: An interactive Jupyter Notebook tutotrial for biogeochemical Argo float time series analysis'
 tags: 
   - BGC-Argo
   - Jupyter Notebook
   - Python
-  - Oceanography
-  - Marine ecosystems
+  - oceanography
+  - marine ecosystem health
 
 authors:
   - name: Haruto Fujishima
@@ -24,13 +24,15 @@ affiliations:
   - name: Application Laboratory, Japan Agency for Marine-Earth Science and Technology, Yokohama, Japan
     index: 2
 
-date: 19 January 2026
+date: 31 March 2026
 bibliography: paper.bib
 ---
 
 # Summary
 
-`ar-bgc-argo` is a set of Jupyter Notebook templates that transform raw profiles of biogeochemical Argo (BGC-Argo) floats into "analysis-ready" time series of ocean temperature, salinity, and biogeochemical variables. Users can search for floats based the dates, geographic region, and biogeochemical variables of their interests. After downloading the profile time series of a selected float, `ar-bgc-argo` can visualize, filter, interpolate, and save the post-processed time series as a netCDF file. In addition, `ar-bgc-argo` applies variable-specific treatments and derive additional oceanographic variables using empirical equations. `ar-bgc-argo` is designed to help expand the end users of the growing BGC-Argo float data.
+`ar-bgc-argo` is a collection of Jupyter Notebook modules that provides a step-by-step guide on the analysis of biogeochemical Argo (BGC-Argo) data. In this tutorial, users will learn how to search This tutorial is intended for students and researchers of oceanography who are new to accessing this growing dataset of profiling floats that routinely measure seawater temperature, salinity, and biogeochemical properties in the global ocean.
+
+ transform raw profiles of biogeochemical Argo (BGC-Argo) floats into "analysis-ready" time series of ocean temperature, salinity, and biogeochemical variables. Users can search for floats based the dates, geographic region, and biogeochemical variables of their interests. After downloading the profile time series of a selected float, `ar-bgc-argo` can visualize, filter, interpolate, and save the post-processed time series as a netCDF file. In addition, `ar-bgc-argo` applies variable-specific treatments and derive additional oceanographic variables using empirical equations. `ar-bgc-argo` is designed to help expand the end users of the growing BGC-Argo float data.
 
 # Statement of need
 
@@ -75,10 +77,6 @@ target float is already known. Upon execution, `download.ipynb` creates a direct
 # Research impact statement
 
 There are various ways in which `ar-bgc-argo` can be used for oceanographic research. First, `ar-bgc-argo` may be used stand alone to monitor and understand the vertical structure of physical and biogeochemical properties in a specific region of interest on a near-real-time basis, which may help in research expedition planning. Second, `ar-bgc-argo` may be adapted to serve as initial and boundary conditions for one-dimensional ocean models as mentioned above [@bruggeman2024]. Third, `ar-bgc-argo` is a quick and easy tool for assessing the performance of large-scale ocean biogeochemical model simulations as it provides refined float time series that has uniform vertical grids ready for immediate comparison. In fact, `ar-bgc-argo` has been used for assessment of seasonal ocean prediction of chlorophyll-a and nitrate in the equatorial Pacific [@doi2026]. Lastly, `ar-bgc-argo` is intended to contribute to attracting new end users of BGC-Argo data globally, but particularly in Japan, by providing the Japanese language support.
-
-# AI usage disclosure
-
-Generative AI tools were used for debugging the Jupyter Notebook templates.
 
 # Acknowledgements
 
