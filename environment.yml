@@ -1,4 +1,4 @@
-name: diy-bgc-argo
+name: bgc-argo-tutorials
 channels:
   - conda-forge
   - defaults
@@ -21,6 +21,7 @@ dependencies:
   - netcdf4
   - dask
   
-  # If you ended up using the ipynb library to import functions, uncomment the line below:
-  # - pip:
-  #   - ipynb
+  # Pip installer and specific pip packages
+  - pip
+  - pip:
+      - ipynb
