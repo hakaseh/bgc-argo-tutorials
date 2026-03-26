@@ -1,0 +1,26 @@
+name: diy-bgc-argo
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # The core Python and Jupyter environment
+  - python=3.11
+  - jupyterlab
+  - notebook
+  
+  # Data manipulation and math
+  - pandas
+  - numpy
+  
+  # Plotting and mapping
+  - matplotlib
+  - cartopy
+  
+  # NetCDF data handling (Crucial for Argo)
+  - xarray
+  - netcdf4
+  - dask
+  
+  # If you ended up using the ipynb library to import functions, uncomment the line below:
+  # - pip:
+  #   - ipynb
