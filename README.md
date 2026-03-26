@@ -1,15 +1,15 @@
-# pp-bgc-argo: An interactive Jupyter Notebook tutorial for post-processing biogeochemical Argo float time series
+# bgc-argo-tutorials: An interactive Jupyter Notebook guide to biogeochemical Argo data
 
 [:japan: 日本語はこちら](#生物地球化学アルゴフロート時系列後処理チュートリアル)
 
-`pp-bgc-argo` is a collection of Jupyter Notebook templates that serves as a tutorial for post-processing biogeochemical Argo (BGC-Argo) float time series. searching, downloading, and post-processing the concatenated synthetic-profile time series of BGC-Argo floats.
+`bgc-argo-tutorials` is a series of Jupyter Notebook tutorials that serves as a tutorial for post-processing biogeochemical Argo (BGC-Argo) float time series. searching, downloading, and post-processing the concatenated synthetic-profile time series of BGC-Argo floats.
 
 To use these templates, simply create a copy (and rename it), modify the user inputs, and run it on your Jupyter environment. **But please remember to cite the following paper to make us happy 😃:**
 
-`Fujishima, H. and Hayashida, H. (submitted): ar-bgc-argo: Jupyter Notebook templates for searching, downloading, and post-processing biogeochemical Argo float time series, Journal of Open Source Software.`
+`Fujishima, H. and Hayashida, H. (in prep): bgc-argo-tutorials: An interactive Jupyter Notebook guide to biogeochemical Argo data, Journal of Open Source Education.`
 
 ## Contents
-`ar-bgc-argo` consists of three Jupyter Notebook templates that do the following:
+`bgc-argo-tutorials` consists of three Jupyter Notebook templates that do the following:
 
 - Search for BGC-Argo float(s) of your interest (`search.ipynb`)
 - Download the concatenated synthetic-profile time series of a selected float (`download.ipynb`)
