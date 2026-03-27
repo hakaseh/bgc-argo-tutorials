@@ -72,8 +72,11 @@ This is the main notebook, which post-processes the raw data by filtering, smoot
 1. Create a copy of the template you want to use and open the copied notebook.
 1. Modify the input based on your need and run through the notebook.
 
+## Feedback
+We want to hear your thoughts! Please feel free to provide your user experience by visiting [this link](https://forms.gle/oAGmz5RTW4Pp46bt7). Your feedback will help us improve the contents of `bgc-argo-tutorials`.
+
 ## Contact
-Please feel free to message [@hakaseh](https://github.com/hakaseh) for questions, suggestions, and comments. We welcome creating new issues or contributing to existing ones ([Issues](https://github.com/hakaseh/ar-bgc-argo/issues)).
+Please feel free to message [@hakaseh](https://github.com/hakaseh). We also welcome creating new issues or contributing to existing ones ([Issues](https://github.com/hakaseh/bgc-argo-tutorials/issues)).
 
 ## Notes
 
