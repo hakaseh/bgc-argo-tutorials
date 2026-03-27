@@ -1,5 +1,8 @@
 # Ignore Jupyter Notebook checkpoints anywhere in the project
 .ipynb_checkpoints/
-
+*.png
+*.nc
+*.csv
+lessons/[0-9]*/
 # Ignore macOS custom attribute files anywhere in the project
 .DS_Store
