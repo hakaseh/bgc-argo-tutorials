@@ -1,6 +1,6 @@
 # bgc-argo-tutorials: An interactive Jupyter Notebook guide to biogeochemical Argo data [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/hakaseh/bgc-argo-tutorials/HEAD)
 
-[:japan: 日本語はこちら](#生物地球化学アルゴフロート時系列後処理チュートリアル)
+[:japan: 日本語はこちら](#生物地球化学アルゴチュートリアル)
 
 `bgc-argo-tutorials` is a series of Jupyter Notebook tutorials that serves as a tutorial for post-processing biogeochemical Argo (BGC-Argo) float time series. searching, downloading, and post-processing the concatenated synthetic-profile time series of BGC-Argo floats.
 
@@ -89,12 +89,13 @@ Please feel free to message [@hakaseh](https://github.com/hakaseh). We also welc
 - [Claustre et al. 2020](https://doi.org/10.1146/annurev-marine-010419-010956): this paper provides an overview of BGC-Argo
 - [OceanOPS Argo map](https://www.ocean-ops.org/maps/static/?t=Argo): for Argo float coverage
 - [Argo fleet monitoring](https://fleetmonitoring.euro-argo.eu/dashboard): floats
+- [Peer reviewed articles using BGC-Argo](https://biogeochemical-argo.org/peer-review-articles-data-table-stat.php)
 
 ---
 
-# 生物地球化学アルゴフロート時系列後処理チュートリアル
+# 生物地球化学アルゴチュートリアル
 
-`ar-bgc-argo`は、生物地球化学アルゴ(BGC-Argo)フロートのsynthetic-profile時系列を"解析可能"な状態にデータセットを創出するJupyter Notebookを提供しています。
+`bgc-argo-tutorials`は、生物地球化学アルゴ(BGC-Argo)フロートのsynthetic-profile時系列を"解析可能"な状態にデータセットを創出するJupyter Notebookを提供しています。
 
 ノートブックを使われる際は、以下の文献の引用をお願いいたします 🙇：
 

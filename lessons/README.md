@@ -4,6 +4,12 @@ This folder contains a series of lessons written in Python and Jupyter Notebook,
 
 Below is the list of lessons currently available:
 
-* Lesson 1: Searching for BGC-Argo float profiles based on our research interests 🔍
-* Lesson 2: Drawing maps and timelines to understand spatial and temporal coverages 👀
-* Lesson 3: Downloading float time series and individual profiles ⬇️
+* Lesson 1: Search for BGC-Argo float profiles based on our research interests 🔍
+* Lesson 2: Draw maps and timelines to understand spatial and temporal coverages 🎨
+* Lesson 3: Download float time series and individual profiles ⬇️
+* Lesson 4: Take a first look at the float time series and QC flags 👀
+* Lesson 5: Smoothing and NPQ correction of CHLA
+* Lesson 6: Decomposition of BBP700
+* Lesson 7: Interpolate the float time series 🪄
+* Lesson 8: 
+* Lesson 9: 
