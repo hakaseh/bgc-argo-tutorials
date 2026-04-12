@@ -1,10 +1,10 @@
 # bgc-argo-tutorials: A practical guide to biogeochemical Argo data analysis [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/hakaseh/bgc-argo-tutorials/HEAD)
 
-`bgc-argo-tutorials` provides a series of lessons on the analysis of biogeochemical Argo (BGC-Argo) data written in Python and Jupyter Notebook. Specifically, `bgc-argo-tuorials` teaches you how to search, identify, download, visualize, and post-process the vertical profiles of physical and biogeochemical oceanographic variables measured by autonomous floats in the global ocean. An overview of `bgc-argo-tutorials` is provided as [a peer-review article](https://jose.theoj.org/) in the Journal of Open Source Education. If you find `bgc-argo-tutorials` useful, please consider citing our paper:
+`bgc-argo-tutorials` provides a series of lessons on the analysis of biogeochemical Argo (BGC-Argo) data written in Python and Jupyter Notebook. Specifically, `bgc-argo-tuorials` teaches you how to search, identify, download, visualize, and post-process the vertical profiles of physical and biogeochemical oceanographic variables measured by autonomous floats in the global ocean. An overview of `bgc-argo-tutorials` is provided as [a peer-reviewed article](https://jose.theoj.org/) in the Journal of Open Source Education. If you find `bgc-argo-tutorials` useful, please consider citing our paper:
 
 `Fujishima, H. and Hayashida, H. (submitted): bgc-argo-tutorials: A practical guide to biogeochemical Argo data analysis, Journal of Open Source Education.`
 
-<font color="red">Ready to dive into BGC-Argo data but not sure where to begin? Give `bgc-argo-tutorials` a try!</font>
+🚨 Ready to dive into BGC-Argo data but not sure where to begin? Give `bgc-argo-tutorials` a try!
 
 ## 🚀 Getting Started
 To try `bgc-argo-tutorials`, click on [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/hakaseh/bgc-argo-tutorials/HEAD), which allows you to test our Jupyter Notebooks (i.e., lessons) on cloud. This is useful if you do not have a Jupyter environment or if you just want to check out `bgc-argo-tutorials` before installing them.
@@ -26,7 +26,7 @@ For questions and comments, feel free to create a new issue or replying to an ex
 - [Peer reviewed articles using BGC-Argo](https://biogeochemical-argo.org/peer-review-articles-data-table-stat.php)
 
 ## 🗃️ Old Repo
-`ar-bgc-argo` was initially hosted on Gitlab, but was later moved to Github for the JOSE submission. We kept the old repository for reference to [issues](https://gitlab.com/evparg/analysis-ready-bgc-argo-dataset/-/issues).
+`bgc-argo-tutorials` was initially hosted on Gitlab, but was later moved to Github for the JOSE submission. We kept the old repository for reference to [issues](https://gitlab.com/evparg/analysis-ready-bgc-argo-dataset/-/issues).
 
 ## 🇯🇵　日本語 (Japanese Language Support)
-`bgc-argo-tutorials`では、日本語によるサポートも実施しております。お気軽にお問い合わせください（海洋研究開発機構　林田博士）。
+`bgc-argo-tutorials`では、日本語によるサポートやワークショップも実施しております。お気軽にお問い合わせください（海洋研究開発機構　林田博士）。
