@@ -1,11 +1,11 @@
 ---
-title: 'ar-bgc-argo: An interactive Jupyter Notebook tutotrial for biogeochemical Argo float time series analysis'
+title: 'bgc-argo-tutorials: A practical guide to biogeochemical Argo data analysis'
 tags: 
   - BGC-Argo
   - Jupyter Notebook
   - Python
-  - oceanography
-  - marine ecosystem health
+  - Oceanography
+  - Marine ecosystems
 
 authors:
   - name: Haruto Fujishima
@@ -24,63 +24,27 @@ affiliations:
   - name: Application Laboratory, Japan Agency for Marine-Earth Science and Technology, Yokohama, Japan
     index: 2
 
-date: 31 March 2026
+date: 16 April 2026
 bibliography: paper.bib
 ---
 
 # Summary
 
-`ar-bgc-argo` is a collection of Jupyter Notebook modules that provides a step-by-step guide on the analysis of biogeochemical Argo (BGC-Argo) data. In this tutorial, users will learn how to search This tutorial is intended for students and researchers of oceanography who are new to accessing this growing dataset of profiling floats that routinely measure seawater temperature, salinity, and biogeochemical properties in the global ocean.
+Biogeochemical Argo (BGC-Argo) is an ocean observing system for monitoring the health of marine ecosystems by a global array of autonomous profiling floats that routinely measure biogeochemical properties in the upper 2,000 m of the water column every 10 days or so [@claustre2020]. By 2030, the global BGC-Argo community aims to cover the global ocean with 1,000 floats equipped with sensors that can measure up to six key variables: chlorophyll-a, pH, oxygen, nitrate, irradiance, and suspended particles [@thierry2025]. The collected profiles are made publicly available in the netCDF format within a day or so, and can be used for scientific analysis and operational purposes.
 
- transform raw profiles of biogeochemical Argo (BGC-Argo) floats into "analysis-ready" time series of ocean temperature, salinity, and biogeochemical variables. Users can search for floats based the dates, geographic region, and biogeochemical variables of their interests. After downloading the profile time series of a selected float, `ar-bgc-argo` can visualize, filter, interpolate, and save the post-processed time series as a netCDF file. In addition, `ar-bgc-argo` applies variable-specific treatments and derive additional oceanographic variables using empirical equations. `ar-bgc-argo` is designed to help expand the end users of the growing BGC-Argo float data.
+Here we introduce `bgc-argo-tutorials`, which provides a step-by-step guide on the analysis of BGC-Argo data using Python and Jupyter Notebook. This learning module is designed for graduate students and early-career researchers of Oceanography [e.g., Early Career Ocean Professionals or ECOPs @li_early_2025] ready to dive into BGC-Argo data analysis for their research projects. A basic knowledge on the Argo program [@wong2020] and BGC-Argo [@bittig2019] is a prerequisite. `bgc-argo-tuorials` provides lessons on how to search, identify, download, and post-process the profiles for conducting time-series analysis. The end product of `bgc-argo-tutorials` can be used for: understanding the spatial and temporal variability of ocean dynamics and biogeochemistry; evaluating the performance of numerical model simulations and other data products; and improving ocean biogeochemical prediction. `bgc-argo-tutorials` aims to help expand the end users of the growing BGC-Argo data in Japan and beyond.
 
 # Statement of need
 
-Biogeochemical Argo (BGC-Argo) is a global network of autonomous profiling floats in the ocean that has brought dramatic advances in our understanding of ocean biogeochemistry and marine ecosystems in recent years [@thierry2025]. The global BGC-Argo community aims to cover the global ocean with 1,000 floats that operate every 10 days or so, monitoring biogeochemical properties from the sea surface to 2,000 m deep [@claustre2020]. These profiling floats are equipped with sensors that can measure up to six key variables: chlorophyll-a, pH, oxygen, nitrate, irradiance, and suspended particles [@bittig2019]. As of December 2025, 861 BGC-Argo floats are already in operation, but only 111 of these are equipped with the six full sensors (Figure 1). The collected profiles are made publicly available in the netCDF format within a day or so [@wong2020].
+While the BGC-Argo database is an invaluable resource, the native formatting of the NetCDF files presents a steep learning curve for new users. Direct utilization of the raw datasets is computationally cumbersome due to non-standard data typing, such as the use of string arrays for Quality Control (QC) flags instead of easily maskable integers. Furthermore, because the vertical sampling depths vary irregularly across individual profiles, the data must be interpolated onto a standardized depth grid to enable continuous 2D visualizations and direct comparisons with gridded model and other data products. `bgc-argo-tutorials` addresses these bottlenecks by providing working examples and functions for the necessary post-processing of the data. 
 
-Despite the growing application of BGC-Argo data, the raw profiles include technical errors and doubtful values because of poor sensor calibration and high sensitivity to noise and artifacts. Furthermore, the data are unfiltered (containing both good- and bad-quality samples) and have inconsistent sampling depths among profiles from a given float. These issues necessitate post-processing prior to scientific analysis, which requires technical knowledge hence, becomes a time-consuming task.
+The scope and approach of `bgc-argo-tutorials` are structurally different from other existing softwares, learning modules, and data products related to BGC-Argo, because it requires users to understand the source code for each function developed within [cf. @maze2020], it focuses specifically on BGC-Argo and is targeted at users with basic knowledge on BGC-Argo [cf. gonzalez-santana_argo_2024], and it gives access to post-processed data on a near-real-time basis [cf. @johnson2023]. The idea for `bgc-argo-tutorials` was conceived when the corresponding author started using the BGC-Argo data for the first time and experienced the issues mentioned above [@hayashida2025]. The author also noticed the relatively low use cases by the Japanese researchers (out of the 849 BGC-Argo papers published, only 24 papers are led by authors with the Japanese surnames; https://argo.ucsd.edu/outreach/publications/biogeochemical-argo-bibliography/ as of February 2, 2026). To address this regional issue, we provide support for `bgc-argo-tutorials` in Japanese and organize on-site tutorial sessions in the near future.
 
-![Figure 1: Global coverage of operational BGC-Argo floats as of December 2025 (<https://www.ocean-ops.org/share/Argo/Maps/bgc.png>; accessed on January 16, 2026).](figures/Figure1.png)
-
-# Overview of ar-bgc-argo
-
-`ar-bgc-argo` consists of three Jupyter Notebook templates: `search.ipynb`; `download.ipynb`; and `generate.ipynb`. To use these templates, users create a copy of the template of their interest, modify its inputs, and run it on their Jupyter environment.
-
-## search.ipynb
-
-`search.ipynb` searches for BGC-Argo floats from the synthetic-profile index file (argo_synthetic-profile_index.txt) of the Global Data Assembly Center [GDAC\; @bittig2019] and based on the user inputs, including the temporal and spatial coverages and the biogeochemical variables of interest. In addition, `search.ipynb` allows users to narrow
-down the float selection based on three key criteria:
-
-- mindays: the minimum duration of the data record to ensure sufficient temporal coverage (e.g., at least 365 days).
-
-- minfreq: the minimum sampling frequency required to capture temporal variability (e.g., at least every 14 days).
-
-- maxdrift: the float's maximum drift speed (e.g., 0.05 m/s), which is particularly useful for identifying "quasi-Eulerian" floats suitable for one-dimensional modelling [e.g., @bruggeman2024].
-
-The trajectories of all qualified floats based on the search criteria are drawn on a map and their temporal coverages are visualized on a time series. These visualizations provide an intuitive overview, enabling users to identify potential spatial and temporal biases in observational coverage within the study region of interest prior to data retrieval [@hayashida2025].
-
-## download.ipynb
-
-`download.ipynb` retrieves the concatenated synthetic-profiles time series of a selected float (\[wmoid\]\_Sprof.nc, where \[wmoid\] is the seven-digit World Meteorological Organization Identifier or WMO ID). While `download.ipynb` naturally follows the selection made in `search.ipynb`, it can also be used independently if the WMO ID of the
-target float is already known. Upon execution, `download.ipynb` creates a directory named after the WMO ID to store the data. It then identifies the correct file path from the synthetic-profile index file and downloads the data from one of the two GDACs.
-
-## generate.ipynb
-
-`generate.ipynb` is the core component of `ar-bgc-argo`, designed to transform raw BGC-Argo profiles into "analysis-ready" time series suitable for immediate scientific application. The data processing workflow consists of eight steps (Figure 2). At every step, diagnostic plots are generated and enable users to visually verify the reliability of the post-processing, which prevents a "black-box" approach and ensures the production of high-quality datasets.
-
-![Figure 2: Schematic workflow of the data-processing pipeline implemented in `generate.ipynb`, which involves procedures based on @briggs2020, @schmechtig2023, and @xing2012. This example assumes a full-sensor float with an arbitrary WMO ID (1234567).](figures/Figure2.png)
-
-# Software design
-
-`ar-bgc-argo` was designed to help get started with the BGC-Argo data analysis, while allowing the users to see and modify the source code as they run the Jupyter Notebook templates. Doing so motivates the users to learn the code and customize it for their own application. This approach is structurally different from library-based products [e.g., @maze2020], which are designed to work without needing to see the source code. Furthermore, `ar-bgc-argo` gives immediate access to post-processed data as soon as the data become available on GDACs. This near-real-time capability is advantageous over data archiving such as @johnson2023, which is updated approximately every six months.
-
-# Research impact statement
-
-There are various ways in which `ar-bgc-argo` can be used for oceanographic research. First, `ar-bgc-argo` may be used stand alone to monitor and understand the vertical structure of physical and biogeochemical properties in a specific region of interest on a near-real-time basis, which may help in research expedition planning. Second, `ar-bgc-argo` may be adapted to serve as initial and boundary conditions for one-dimensional ocean models as mentioned above [@bruggeman2024]. Third, `ar-bgc-argo` is a quick and easy tool for assessing the performance of large-scale ocean biogeochemical model simulations as it provides refined float time series that has uniform vertical grids ready for immediate comparison. In fact, `ar-bgc-argo` has been used for assessment of seasonal ocean prediction of chlorophyll-a and nitrate in the equatorial Pacific [@doi2026]. Lastly, `ar-bgc-argo` is intended to contribute to attracting new end users of BGC-Argo data globally, but particularly in Japan, by providing the Japanese language support.
+Earlier versions of `bgc-argo-tutorials` were presented at the Japan Geoscience Union Meeting 2025 in Chiba and the Oceanographic Society of Japan Fall Meeting 2025 in Hokkaido. A hands-on workshop on BGC-Argo data analysis using `bgc-argo-tutorials` will be held as a side event of the OneArgo international workshop in Miyagi on June 2, 2026. An earlier version of `bgc-argo-tutorials` has been used for the assessment of seasonal ocean prediction of chlorophyll-a and nitrate in the equatorial Pacific by a global climate model [@doi2026].
 
 # Acknowledgements
 
-BGC-Argo data are freely available through one of the two GDACs. We thank Hidehiro Fujio for computational assistance and Pete Strutton, Clara Vives, Kanako Sato, Yoshimi Kawai for insightful discussion on BGC-Argo floats and feedback on earlier versions of `ar-bgc-argo`. This work was supported by JSPS KAKENHI Grant Number JP24H02226 and the Nakajima Foundation.
+BGC-Argo data are made freely available through the two GDACs. We thank Hidehiro Fujio for computational assistance and Pete Strutton, Clara Vives, Kanako Sato, Yoshimi Kawai for insightful discussion on BGC-Argo floats and feedback on earlier versions of `bgc-argo-tutorials`. This work was supported by JSPS KAKENHI Grant Number JP24H02226 and the Nakajima Foundation.
 
 # References
 
