@@ -11,6 +11,9 @@ dependencies:
   # Data manipulation and math
   - pandas
   - numpy
+
+  # Oceanographic calculations
+  - gsw
   
   # Plotting and mapping
   - matplotlib
