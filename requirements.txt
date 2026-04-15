@@ -1,0 +1,12 @@
+jupyterlab
+notebook
+pandas
+numpy
+gsw
+matplotlib
+cartopy
+xarray
+netcdf4
+dask
+ipynb
+ipykernel
