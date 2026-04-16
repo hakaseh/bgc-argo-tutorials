@@ -1,6 +1,7 @@
 jupyterlab
 notebook
 pandas
+pyarrow
 numpy
 gsw
 matplotlib

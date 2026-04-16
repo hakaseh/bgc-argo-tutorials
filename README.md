@@ -62,7 +62,7 @@ We highly recommend using `conda` to manage your Python environment, as it autom
 
     🚨 **A note on cartopy for pip users:** The cartopy mapping library requires underlying system binaries (specifically GEOS and PROJ). While pip usually installs pre-compiled versions successfully, older or highly restricted operating systems might throw compiler errors. If this happens, you may need to install the geos and proj system binaries locally before pip install will work.
 
-### Final step (common to both options)
+### Final step (common to both conda and pip)
 
 Register this specific environment as a permanent Jupyter kernel:
 ```
@@ -75,10 +75,10 @@ Finally, launch Jupyter (e.g., `jupyter notebook` or `jupyterlab`), open `lesson
 `bgc-argo-tutorials` consists of the following folders:
 
 * **lessons** contains the main Jupyter Notebook tutorials.
-* **index_files** contains customized index files generated in Lesson 1.
-* **figures** contains figures generated in Lesson 2/.
-* **floats** contains the float time series and individual profiles downloaded in Lesson 3 and the interpolated time series generated in Lesson 5/6. 
-
+* **index_files** contains customized index files generated in lessons.
+* **figures** contains figures generated in lessons.
+* **floats** contains the float time series and individual profiles downloaded in Lesson 3 and the interpolated time series generated in lessons.
+* **_drafts** contains lessons in progress (incomplete and untested).
 
 ## 🗳️ Feedback 
 We want to hear your thoughts! Please feel free to provide your user experience by visiting [this link](https://forms.gle/oAGmz5RTW4Pp46bt7). Your feedback will help us improve the contents of `bgc-argo-tutorials`.
@@ -87,12 +87,14 @@ We want to hear your thoughts! Please feel free to provide your user experience 
 For questions and comments, feel free to create a new issue or replying to an existing one by visiting [Issues](https://github.com/hakaseh/bgc-argo-tutorials/issues). Alternatively, you may send a message to [@hakaseh](https://github.com/hakaseh).
 
 ## 📚 Resources
-- [Argo Online School](https://euroargodev.github.io/argoonlineschool/intro.html)
-- [Wong et al. 2020](https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2020.00700/full): this paper provides an overview of Argo
-- [Claustre et al. 2020](https://doi.org/10.1146/annurev-marine-010419-010956): this paper provides an overview of BGC-Argo
-- [OceanOPS Argo map](https://www.ocean-ops.org/maps/static/?t=Argo)
-- [Argo fleet monitoring](https://fleetmonitoring.euro-argo.eu/dashboard)
-- [Peer reviewed articles using BGC-Argo](https://biogeochemical-argo.org/peer-review-articles-data-table-stat.php)
+- [Argo Online School](https://euroargodev.github.io/argoonlineschool/intro.html): An e-learning tool to get started with Argo
+- [Bittig et al. (2019)](https://www.frontiersin.org/article/10.3389/fmars.2019.00502/full): An overview of the BGC-Argo program
+- [Claustre et al. 2020](https://doi.org/10.1146/annurev-marine-010419-010956): A review of the BGC-Argo program
+- [Wong et al. 2020](https://www.frontiersin.org/journals/marine-science/articles/10.3389/fmars.2020.00700/full): A 20-year history of the Argo prgoram
+- [OceanOPS Argo map](https://www.ocean-ops.org/maps/static/?t=Argo): A mapping tool for Argo float distributions 
+- [Argo fleet monitoring](https://fleetmonitoring.euro-argo.eu/dashboard): A tracking tool for Argo floats
+- [Peer-reviewed articles using the BGC-Argo data](https://biogeochemical-argo.org/peer-review-articles-data-table-stat.php)
+- [Argopy](https://argopy.readthedocs.io/en/latest/index.html): A Python library for Argo data analysis
 
 ## 🗃️ Old Repo
 `bgc-argo-tutorials` was initially hosted on Gitlab, but was later moved to Github for the JOSE submission. We kept the old repository for reference to [issues](https://gitlab.com/evparg/analysis-ready-bgc-argo-dataset/-/issues).

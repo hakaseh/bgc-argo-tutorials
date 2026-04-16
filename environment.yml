@@ -11,6 +11,7 @@ dependencies:
   
   # Data manipulation and math
   - pandas
+  - pyarrow
   - numpy
 
   # Oceanographic calculations
