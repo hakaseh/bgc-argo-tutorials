@@ -9,7 +9,7 @@ This folder contains the following lessons and functions (* means that the argum
     * filter2_and_save_index(df_index, mindura*, minfreq*, maxdrif*, note*)
 * **Lesson 2**: 🎨 Maps and timelines
     * load_filtered_index(file_path)
-    * save_map_timeline(df_index, note*, mapsize*, timelinesize*)
+    * show_map_timeline(df_index, note*, mapsize*, timelinesize*)
 * **Lesson 3**: ⬇️ Download
     * download_argo(df_index, wmoid_input*)
 * **Lesson 4**: ✅ QC flags
