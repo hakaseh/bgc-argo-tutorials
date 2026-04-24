@@ -3,7 +3,7 @@ name: Daily BGC-Argo Map Update
 on:
   schedule:
     # This cron schedule runs at 23:59 UTC every day. 
-    - cron: '23 59 * * *'
+    - cron: '59 23 * * *'
   # This line adds a button in GitHub so you can test it manually!
   workflow_dispatch: 
 
@@ -29,7 +29,8 @@ jobs:
           python -m pip install --upgrade pip
           pip install -r requirements.txt
           pip install nbconvert  # This is the tool that runs notebooks in the terminal!
-- name: Execute Jupyter Notebook
+
+      - name: Execute Jupyter Notebook
         run: |
           jupyter nbconvert --to notebook --execute --inplace automation/bgc-argo-today.ipynb
 
@@ -37,7 +38,7 @@ jobs:
         run: |
           git config --local user.email "hakaseh@jamstec.go.jp"
           git config --local user.name "hakaseh"
-          # Tell Git to look inside the dashboard folder!
+          # Tell Git to look inside the automation folder!
           git add automation/bgc-argo-today.ipynb 
           git commit -m "Automated daily update of BGC-Argo map" || echo "No changes to commit"
           git push
