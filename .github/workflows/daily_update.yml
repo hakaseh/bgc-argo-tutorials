@@ -7,6 +7,10 @@ on:
   # This line adds a button in GitHub so you can test it manually!
   workflow_dispatch: 
 
+# FIX: This forces GitHub to use the new Node 24 engine and stops the warning
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   run-notebook:
     runs-on: ubuntu-latest
