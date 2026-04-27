@@ -4,7 +4,7 @@ This folder contains the following lessons and functions (* means that the argum
 
 * **Lesson 1**: 🔍 Search for floats 
     * load_index()
-    * filter_index(df_index, lon0, lon1, lat0, lat1, date0, date1, bgc_parameters)
+    * filter_index(df_index, lon0, lon1, lat0, lat1, date0, date1, bgc_parameters, bgc_mode)
     * calculate_float_speed(lon, lat, date)
     * filter2_and_save_index(df_index, mindura*, minfreq*, maxdrif*, note*)
 * **Lesson 2**: 🎨 Maps and timelines

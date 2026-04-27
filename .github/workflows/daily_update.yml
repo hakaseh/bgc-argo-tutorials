@@ -36,13 +36,13 @@ jobs:
 
       - name: Execute Jupyter Notebook
         run: |
-          jupyter nbconvert --to notebook --execute --inplace automation/bgc-argo-today.ipynb
+          jupyter nbconvert --to notebook --execute --inplace automation/chla_weekly.ipynb
 
       - name: Commit and Push Changes
         run: |
           git config --local user.email "hakaseh@jamstec.go.jp"
           git config --local user.name "hakaseh"
           # Tell Git to look inside the automation folder!
-          git add automation/bgc-argo-today.ipynb 
+          git add automation/chla_weekly.ipynb 
           git commit -m "Automated daily update of BGC-Argo map" || echo "No changes to commit"
           git push
