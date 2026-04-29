@@ -19,7 +19,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          pip install pandas plotly xarray netCDF4 requests nbconvert ipykernel
+          pip install pandas numpy plotly xarray netCDF4 requests nbconvert ipykernel ipynb
 
       - name: Run Notebook
         run: |
