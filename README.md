@@ -95,6 +95,7 @@ For questions and comments, feel free to create a new issue or replying to an ex
 - [Argo fleet monitoring](https://fleetmonitoring.euro-argo.eu/dashboard): A tracking tool for Argo floats
 - [Peer-reviewed articles using the BGC-Argo data](https://biogeochemical-argo.org/peer-review-articles-data-table-stat.php)
 - [Argopy](https://argopy.readthedocs.io/en/latest/index.html): A Python library for Argo data analysis
+- [BGC-Argo data products](https://biogeochemical-argo.org/bgc-data-products.php): Post-processed data products
 
 ## 🗃️ Old Repo
 `bgc-argo-tutorials` was initially hosted on Gitlab, but was later moved to Github for the JOSE submission. We kept the old repository for reference to [issues](https://gitlab.com/evparg/analysis-ready-bgc-argo-dataset/-/issues).
