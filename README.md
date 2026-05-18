@@ -96,6 +96,7 @@ For questions and comments, feel free to create a new issue or replying to an ex
 - [Peer-reviewed articles using the BGC-Argo data](https://biogeochemical-argo.org/peer-review-articles-data-table-stat.php)
 - [Argopy](https://argopy.readthedocs.io/en/latest/index.html): A Python library for Argo data analysis
 - [BGC-Argo data products](https://biogeochemical-argo.org/bgc-data-products.php): Post-processed data products
+- [BGC-Argo+](https://www.bgc-argo-plus.info/): A dataset containing all available biogeochemical Argo data with a secondary quality control applied. Data available as individual float files or in monthly 1x1 gridded options.
 
 ## 🗃️ Old Repo
 `bgc-argo-tutorials` was initially hosted on Gitlab, but was later moved to Github for the JOSE submission. We kept the old repository for reference to [issues](https://gitlab.com/evparg/analysis-ready-bgc-argo-dataset/-/issues).
