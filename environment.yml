@@ -1,0 +1,33 @@
+name: bgc-argo-tutorials
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  # The core Python and Jupyter environment
+  - python=3.11
+  - jupyterlab
+  - notebook
+  - ipykernel
+  
+  # Data manipulation and math
+  - pandas
+  - pyarrow
+  - numpy
+  - scipy
+
+  # Oceanographic calculations
+  - gsw
+  
+  # Plotting and mapping
+  - matplotlib
+  - plotly
+  
+  # NetCDF data handling (Crucial for Argo)
+  - xarray
+  - netcdf4
+  - dask
+  
+  # Pip installer and specific pip packages
+  - pip
+  - pip:
+      - ipynb
